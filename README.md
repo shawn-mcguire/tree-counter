@@ -5,6 +5,7 @@ Codebase for tree identification from satellite imagery
 
 # Code Flow
 See included df_unique.pkl file for annotation data format example. 
+
 Step 1: Create lookup table using counter_cnn_lookup_table
 	This code creates a lookup table with pixel centers for the x by y grid.  Lookup_table is used in counter_cnn1 	script. The lookup_table is used to find the center of the cropped image thumbnail based on the grid data in the file
 Step 2: Run countr_div_train_test_images.py
