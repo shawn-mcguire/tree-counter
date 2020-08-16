@@ -6,19 +6,19 @@ Codebase for tree identification from satellite imagery.  This code takes binary
 # Usage
 See included df_unique.pkl file for annotation data format example. 
 
-Step 1: counter_cnn_lookup_table
+1.  counter_cnn_lookup_table
 	Creates a lookup table with pixel centers for the x by y grid.  Used in counter_cnn1 script. 
 	
-Step 2: countr_div_train_test_images.py
+2.  countr_div_train_test_images.py
 	Creates train and test splits at the IMAGE LEVEL to prep for thumbnail extraction in countr_cnn_1
 	
-Step 3: countr_cnn_1.py to extract grid cropped images and locate images in train/test folder
+3.  countr_cnn_1.py to extract grid cropped images and locate images in train/test folder
 	Uses the pickled lookup_table.pkl file created by 'counter_cnn_lookup_table.py'
 	Uses the annotation dataframe file selected by user in root directory.  Either df_train_val.pkl or df_test.pkl
 	
-Step 4: countr_cnn_2.py to train on cropped images from grid points
+4.  countr_cnn_2.py to train on cropped images from grid points
 	Outputs the model to 'model.h5' in root directory
 	
-Step 5: countr_cnn_3.py to classify cropped images in test directory and output truth_table dataframe
+5.  countr_cnn_3.py to classify cropped images in test directory and output truth_table dataframe
 
-Step 6: countr_cnn_image_counts.py to get image level counts
+6.  countr_cnn_image_counts.py to get image level counts
